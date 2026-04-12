@@ -12,13 +12,13 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <div class="page-frame">
     <header class="topbar">
-      <a href="#" class="logo-box" aria-label="Domů">
-        <img src="logo.png" alt="Logo" class="logo-img" />
+      <a href="index.html" class="logo-box" aria-label="Domů">
+        <img src="assets/images/logo.png" alt="Logo" class="logo-img" />
       </a>
 
       <div class="site-title">TotalSanityFailure</div>
@@ -27,16 +27,21 @@
         <button type="button" class="contact-btn" id="contactBtn">CONTACT</button>
 
         <div class="menu-wrap">
-          <button type="button" class="menu-btn" id="menuBtn" aria-label="Otevřít menu" aria-expanded="false">
+          <button
+            type="button"
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Otevřít menu"
+            aria-expanded="false"
+          >
             <span></span>
             <span></span>
             <span></span>
           </button>
 
           <nav class="dropdown-menu" id="dropdownMenu">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">PROJECTS</a>
+            <a href="index.html">HOME</a>
+            <a href="pages/projects.html">PROJECTS</a>
             <a href="#contact">CONTACT</a>
           </nav>
         </div>
@@ -46,7 +51,11 @@
     <main class="hero-section">
       <div class="hero-left">
         <div class="gif-shell">
-          <img src="main.gif" alt="Animovaný GIF" class="hero-gif" />
+          <img
+            src="assets/gifs/main.gif"
+            alt="Animovaný GIF"
+            class="hero-gif"
+          />
         </div>
       </div>
 
@@ -63,7 +72,7 @@
       <div class="contact-content">
         <div class="contact-block">
           <h2>CONTACT</h2>
-          <p>hit me up with every weird idea u got!</p>
+          <p>hit me up with all the weird ideas!</p>
         </div>
 
         <div class="contact-block">
@@ -74,6 +83,6 @@
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

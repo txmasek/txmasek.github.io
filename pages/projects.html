@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | TotalSanityFailure</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/projects.css" />
+</head>
+<body>
+  <div class="page-frame">
+    <header class="topbar">
+      <a href="../index.html" class="logo-box" aria-label="Domů">
+        <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+      </a>
+
+      <div class="site-title">TotalSanityFailure</div>
+
+      <div class="topbar-actions">
+        <a href="../index.html" class="contact-btn nav-btn">HOME</a>
+
+        <div class="menu-wrap">
+          <button
+            type="button"
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Otevřít menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="dropdown-menu" id="dropdownMenu">
+            <a href="../index.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="#">ABOUT</a>
+            <a href="../index.html#contact">CONTACT</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="projects-page">
+      <section class="projects-hero">
+        <div class="projects-hero-left">
+          <p class="projects-kicker">ARCHIVE // SELECTED WORK</p>
+          <h1>PROJECTS</h1>
+          <p class="projects-intro">
+            Místo pro moje věci, pokusy, side questy a digitální bordel.
+          </p>
+        </div>
+
+        <div class="projects-hero-right">
+          <div class="status-box">
+            <div class="status-label">STATUS</div>
+            <div class="status-value">UNDER CONSTRUCTION</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-grid-section">
+        <div class="section-header">
+          <h2>SELECTED ENTRIES</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-thumb placeholder-thumb">01</div>
+            <div class="project-meta">
+              <p class="project-type">VISUAL / EXPERIMENT</p>
+              <h3>PROJECT NAME</h3>
+              <p class="project-desc">
+                Krátký placeholder text pro tvoji vybranou práci.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb placeholder-thumb">02</div>
+            <div class="project-meta">
+              <p class="project-type">WEB / CONCEPT</p>
+              <h3>PROJECT NAME</h3>
+              <p class="project-desc">
+                Krátký placeholder text pro tvoji vybranou práci.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb placeholder-thumb">03</div>
+            <div class="project-meta">
+              <p class="project-type">ART / MOTION</p>
+              <h3>PROJECT NAME</h3>
+              <p class="project-desc">
+                Krátký placeholder text pro tvoji vybranou práci.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb placeholder-thumb">04</div>
+            <div class="project-meta">
+              <p class="project-type">MISC / SIDE QUEST</p>
+              <h3>PROJECT NAME</h3>
+              <p class="project-desc">
+                Krátký placeholder text pro tvoji vybranou práci.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects-archive-section">
+        <div class="section-header">
+          <h2>ARCHIVE</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="archive-tabs" id="archiveTabs">
+          <button class="archive-tab is-active" data-category="3d" type="button">3D</button>
+          <button class="archive-tab" data-category="games" type="button">GAMES</button>
+          <button class="archive-tab" data-category="web" type="button">WEB</button>
+          <button class="archive-tab" data-category="misc" type="button">MISC</button>
+        </div>
+
+        <div class="archive-panel">
+          <div class="archive-panel-head">
+            <p class="archive-label">OPEN FOLDER</p>
+            <h3 id="archiveTitle">3D</h3>
+          </div>
+
+          <div class="archive-grid" id="archiveGrid">
+            <!-- 3D -->
+            <article
+              class="archive-card"
+              data-category="3d"
+              data-title="Concrete Head"
+              data-type="3D / MODEL"
+              data-image="../assets/images/archive/3d-1.png"
+              data-description="Stylized concrete character study focused on brutalist shapes, rough material response and silhouette clarity."
+              data-year="2025"
+              data-tools="Blender, Substance Painter"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/3d-1.png" alt="Concrete Head preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">3D / MODEL</p>
+                <h4>Concrete Head</h4>
+                <p>Placeholder text pro 3D projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="3d"
+              data-title="Monolith Study"
+              data-type="3D / RENDER"
+              data-image="../assets/images/archive/3d-2.png"
+              data-description="Atmospheric render experiment based on hard shapes, empty space and dramatic contrast."
+              data-year="2025"
+              data-tools="Blender, Photoshop"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/3d-2.png" alt="Monolith Study preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">3D / RENDER</p>
+                <h4>Monolith Study</h4>
+                <p>Placeholder text pro 3D projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="3d"
+              data-title="Wireframe Figure"
+              data-type="3D / EXPERIMENT"
+              data-image="../assets/images/archive/3d-3.png"
+              data-description="Low fidelity form exploration using exposed structure, rough topology and motion tests."
+              data-year="2024"
+              data-tools="Blender"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/3d-3.png" alt="Wireframe Figure preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">3D / EXPERIMENT</p>
+                <h4>Wireframe Figure</h4>
+                <p>Placeholder text pro 3D projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="3d"
+              data-title="Brutalist Room"
+              data-type="3D / SCENE"
+              data-image="../assets/images/archive/3d-4.jpg"
+              data-description="Interior scene built around oversized forms, concrete surfaces and constrained lighting."
+              data-year="2025"
+              data-tools="Blender, After Effects"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/3d-4.jpg" alt="Brutalist Room preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">3D / SCENE</p>
+                <h4>Brutalist Room</h4>
+                <p>Placeholder text pro 3D projekt.</p>
+              </div>
+            </article>
+
+            <!-- GAMES -->
+            <article
+              class="archive-card"
+              data-category="games"
+              data-title="Dungeon Prototype"
+              data-type="GAME / CONCEPT"
+              data-image="../assets/images/archive/games-1.jpg"
+              data-description="Small gameplay prototype exploring dungeon mood, pacing and player navigation."
+              data-year="2024"
+              data-tools="Unity, Aseprite"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/games-1.jpg" alt="Dungeon Prototype preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">GAME / CONCEPT</p>
+                <h4>Dungeon Prototype</h4>
+                <p>Placeholder text pro herní projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="games"
+              data-title="Combat Loop Test"
+              data-type="GAME / SYSTEM"
+              data-image="../assets/images/archive/games-2.jpg"
+              data-description="System test for combat rhythm, hit feedback and repeatable encounter structure."
+              data-year="2025"
+              data-tools="Godot"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/games-2.jpg" alt="Combat Loop Test preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">GAME / SYSTEM</p>
+                <h4>Combat Loop Test</h4>
+                <p>Placeholder text pro herní projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="games"
+              data-title="Temple Arena"
+              data-type="GAME / LEVEL"
+              data-image="../assets/images/archive/games-3.jpg"
+              data-description="Arena layout study with focus on flow, sightlines and player pressure."
+              data-year="2024"
+              data-tools="Unreal Engine"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/games-3.jpg" alt="Temple Arena preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">GAME / LEVEL</p>
+                <h4>Temple Arena</h4>
+                <p>Placeholder text pro herní projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="games"
+              data-title="Inventory Mockup"
+              data-type="GAME / UI"
+              data-image="../assets/images/archive/games-4.jpg"
+              data-description="UI concept for inventory interaction, item readability and quick equip logic."
+              data-year="2025"
+              data-tools="Figma, Photoshop"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/games-4.jpg" alt="Inventory Mockup preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">GAME / UI</p>
+                <h4>Inventory Mockup</h4>
+                <p>Placeholder text pro herní projekt.</p>
+              </div>
+            </article>
+
+            <!-- WEB -->
+            <article
+              class="archive-card"
+              data-category="web"
+              data-title="Portfolio Layout"
+              data-type="WEB / DESIGN"
+              data-image="../assets/images/archive/web-1.jpg"
+              data-description="Layout concept focused on raw structure, strong hierarchy and monochrome framing."
+              data-year="2025"
+              data-tools="Figma"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/web-1.jpg" alt="Portfolio Layout preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">WEB / DESIGN</p>
+                <h4>Portfolio Layout</h4>
+                <p>Placeholder text pro web projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="web"
+              data-title="Landing Page"
+              data-type="WEB / FRONTEND"
+              data-image="../assets/images/archive/web-2.jpg"
+              data-description="Frontend landing page build with emphasis on visual rhythm and hover interaction."
+              data-year="2025"
+              data-tools="HTML, CSS, JavaScript"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/web-2.jpg" alt="Landing Page preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">WEB / FRONTEND</p>
+                <h4>Landing Page</h4>
+                <p>Placeholder text pro web projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="web"
+              data-title="Neon Dashboard"
+              data-type="WEB / UI"
+              data-image="../assets/images/archive/web-3.jpg"
+              data-description="UI exploration combining dense information blocks with strong visual contrast."
+              data-year="2024"
+              data-tools="Figma, CSS"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/web-3.jpg" alt="Neon Dashboard preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">WEB / UI</p>
+                <h4>Neon Dashboard</h4>
+                <p>Placeholder text pro web projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="web"
+              data-title="Interactive Grid"
+              data-type="WEB / EXPERIMENT"
+              data-image="../assets/images/archive/web-4.jpg"
+              data-description="Interactive layout experiment built around modular panels and animated state changes."
+              data-year="2025"
+              data-tools="JavaScript, GSAP"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/web-4.jpg" alt="Interactive Grid preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">WEB / EXPERIMENT</p>
+                <h4>Interactive Grid</h4>
+                <p>Placeholder text pro web projekt.</p>
+              </div>
+            </article>
+
+            <!-- MISC -->
+            <article
+              class="archive-card"
+              data-category="misc"
+              data-title="Poster Drop"
+              data-type="MISC / SIDE QUEST"
+              data-image="../assets/images/archive/misc-1.jpg"
+              data-description="Series of poster outputs exploring typographic rhythm and rough composition."
+              data-year="2024"
+              data-tools="Photoshop, Illustrator"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/misc-1.jpg" alt="Poster Drop preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">MISC / SIDE QUEST</p>
+                <h4>Poster Drop</h4>
+                <p>Placeholder text pro misc projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="misc"
+              data-title="Random Output"
+              data-type="MISC / VISUAL"
+              data-image="../assets/images/archive/misc-2.jpg"
+              data-description="Loose visual dump made from fragments, test renders and unfinished ideas."
+              data-year="2025"
+              data-tools="Mixed"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/misc-2.jpg" alt="Random Output preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">MISC / VISUAL</p>
+                <h4>Random Output</h4>
+                <p>Placeholder text pro misc projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="misc"
+              data-title="Physical Mock"
+              data-type="MISC / OBJECT"
+              data-image="../assets/images/archive/misc-3.jpg"
+              data-description="Object mockup study documenting material, label placement and photo setup."
+              data-year="2024"
+              data-tools="Cinema 4D, Photoshop"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/misc-3.jpg" alt="Physical Mock preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">MISC / OBJECT</p>
+                <h4>Physical Mock</h4>
+                <p>Placeholder text pro misc projekt.</p>
+              </div>
+            </article>
+
+            <article
+              class="archive-card"
+              data-category="misc"
+              data-title="Unknown Folder"
+              data-type="MISC / CHAOS"
+              data-image="../assets/images/archive/misc-4.jpg"
+              data-description="Catch-all category for unfinished things, weird experiments and loose fragments."
+              data-year="2025"
+              data-tools="Unknown"
+              data-link="#"
+            >
+              <div class="archive-card-thumb">
+                <img src="../assets/images/archive/misc-4.jpg" alt="Unknown Folder preview" />
+              </div>
+              <div class="archive-card-body">
+                <p class="archive-card-type">MISC / CHAOS</p>
+                <h4>Unknown Folder</h4>
+                <p>Placeholder text pro misc projekt.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="archive-overlay" id="archiveOverlay" aria-hidden="true">
+        <div class="archive-overlay-backdrop" id="archiveOverlayBackdrop"></div>
+
+        <div class="archive-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="overlayTitle">
+          <button class="archive-overlay-close" id="archiveOverlayClose" type="button" aria-label="Zavřít detail">
+            ×
+          </button>
+
+          <div class="archive-overlay-grid">
+            <div class="archive-overlay-media">
+              <img id="overlayImage" src="" alt="" />
+            </div>
+
+            <div class="archive-overlay-content">
+              <p class="archive-overlay-type" id="overlayType">PROJECT</p>
+              <h3 id="overlayTitle">Project Title</h3>
+
+              <div class="archive-overlay-meta">
+                <div class="overlay-meta-box">
+                  <span>YEAR</span>
+                  <strong id="overlayYear">2025</strong>
+                </div>
+
+                <div class="overlay-meta-box">
+                  <span>TOOLS</span>
+                  <strong id="overlayTools">Tool list</strong>
+                </div>
+              </div>
+
+              <p class="archive-overlay-description" id="overlayDescription">
+                Project description.
+              </p>
+
+              <div class="archive-overlay-actions">
+                <a href="#" class="archive-overlay-link" id="overlayLink">OPEN PROJECT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="projects-footer-strip">
+        <p>MORE CHAOS SOON</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
