@@ -104,7 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       dot.setAttribute("aria-label", `Zobrazit obrázek ${index + 1}`);
 
-      dot.addEventListener("click", () => {
+      dot.addEventListener("click", (event) => {
+        event.stopPropagation();
         currentImageIndex = index;
         updateOverlayImage();
       });
