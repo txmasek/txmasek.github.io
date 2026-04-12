@@ -113,18 +113,18 @@ document.addEventListener("DOMContentLoaded", () => {
       overlayDots.appendChild(dot);
     });
 
-    const multipleImages = currentGallery.length > 1;
+    const hasMultipleImages = currentGallery.length > 1;
 
     if (overlayPrev) {
-      overlayPrev.classList.toggle("is-hidden", !multipleImages);
+      overlayPrev.classList.toggle("is-hidden", !hasMultipleImages);
     }
 
     if (overlayNext) {
-      overlayNext.classList.toggle("is-hidden", !multipleImages);
+      overlayNext.classList.toggle("is-hidden", !hasMultipleImages);
     }
 
     if (overlayDotsBar) {
-      overlayDotsBar.classList.toggle("is-hidden", !multipleImages);
+      overlayDotsBar.classList.toggle("is-hidden", !hasMultipleImages);
     }
   }
 
