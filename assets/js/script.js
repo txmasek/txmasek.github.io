@@ -72,6 +72,67 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlayTools = document.getElementById("overlayTools");
   const overlayDescription = document.getElementById("overlayDescription");
   const overlayLink = document.getElementById("overlayLink");
+  const overlayPrev = document.getElementById("overlayPrev");
+  const overlayNext = document.getElementById("overlayNext");
+  const overlayDots = document.getElementById("overlayDots");
+  const overlayDotsBar = document.getElementById("overlayDotsBar");
+
+  let currentGallery = [];
+  let currentImageIndex = 0;
+
+  function parseGallery(card) {
+    const galleryRaw = card.dataset.gallery || card.dataset.image || "";
+    return galleryRaw
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
+  }
+
+  function renderDots() {
+    if (!overlayDots) return;
+
+    overlayDots.innerHTML = "";
+
+    currentGallery.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "overlay-dot";
+
+      if (index === currentImageIndex) {
+        dot.classList.add("is-active");
+      }
+
+      dot.setAttribute("aria-label", `Zobrazit obrázek ${index + 1}`);
+
+      dot.addEventListener("click", () => {
+        currentImageIndex = index;
+        updateOverlayImage();
+      });
+
+      overlayDots.appendChild(dot);
+    });
+
+    const multipleImages = currentGallery.length > 1;
+
+    if (overlayPrev) {
+      overlayPrev.classList.toggle("is-hidden", !multipleImages);
+    }
+
+    if (overlayNext) {
+      overlayNext.classList.toggle("is-hidden", !multipleImages);
+    }
+
+    if (overlayDotsBar) {
+      overlayDotsBar.classList.toggle("is-hidden", !multipleImages);
+    }
+  }
+
+  function updateOverlayImage() {
+    if (!overlayImage || !currentGallery.length) return;
+
+    overlayImage.src = currentGallery[currentImageIndex];
+    renderDots();
+  }
 
   function openOverlay(card) {
     if (!overlay) return;
@@ -84,8 +145,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const tools = card.dataset.tools || "—";
     const link = card.dataset.link || "#";
 
+    currentGallery = parseGallery(card);
+
+    if (!currentGallery.length && image) {
+      currentGallery = [image];
+    }
+
+    currentImageIndex = 0;
+
     if (overlayImage) {
-      overlayImage.src = image;
       overlayImage.alt = title;
     }
 
@@ -97,8 +165,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (overlayLink) {
       overlayLink.href = link;
-      overlayLink.style.display = link === "#" ? "none" : "inline-flex";
+
+      if (link === "#") {
+        overlayLink.style.display = "none";
+      } else {
+        overlayLink.style.display = "inline-flex";
+        overlayLink.textContent = "OPEN FULL PROJECT";
+      }
     }
+
+    updateOverlayImage();
 
     overlay.classList.add("is-open");
     overlay.setAttribute("aria-hidden", "false");
@@ -107,9 +183,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closeOverlay() {
     if (!overlay) return;
+
     overlay.classList.remove("is-open");
     overlay.setAttribute("aria-hidden", "true");
     document.body.classList.remove("overlay-open");
+  }
+
+  function showPrevImage() {
+    if (currentGallery.length <= 1) return;
+
+    currentImageIndex =
+      (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+
+    updateOverlayImage();
+  }
+
+  function showNextImage() {
+    if (currentGallery.length <= 1) return;
+
+    currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+    updateOverlayImage();
   }
 
   if (cards.length && overlay) {
@@ -127,9 +220,33 @@ document.addEventListener("DOMContentLoaded", () => {
     overlayClose.addEventListener("click", closeOverlay);
   }
 
+  if (overlayPrev) {
+    overlayPrev.addEventListener("click", (event) => {
+      event.stopPropagation();
+      showPrevImage();
+    });
+  }
+
+  if (overlayNext) {
+    overlayNext.addEventListener("click", (event) => {
+      event.stopPropagation();
+      showNextImage();
+    });
+  }
+
   document.addEventListener("keydown", (event) => {
+    if (!overlay || !overlay.classList.contains("is-open")) return;
+
     if (event.key === "Escape") {
       closeOverlay();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showPrevImage();
+    }
+
+    if (event.key === "ArrowRight") {
+      showNextImage();
     }
   });
 });
