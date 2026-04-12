@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TotalSanityFailure</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-frame">
+    <header class="topbar">
+      <a href="#" class="logo-box" aria-label="Domů">
+        <img src="logo.png" alt="Logo" class="logo-img" />
+      </a>
+
+      <div class="site-title">TotalSanityFailure</div>
+
+      <div class="topbar-actions">
+        <button type="button" class="contact-btn" id="contactBtn">CONTACT</button>
+
+        <div class="menu-wrap">
+          <button type="button" class="menu-btn" id="menuBtn" aria-label="Otevřít menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="dropdown-menu" id="dropdownMenu">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero-section">
+      <div class="hero-left">
+        <div class="gif-shell">
+          <img src="main.gif" alt="Animovaný GIF" class="hero-gif" />
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-copy">
+          <h1>txmasek</h1>
+          <p class="subtitle">profesionol side-quester</p>
+          <p class="handle">@totalsanityfailure</p>
+        </div>
+      </div>
+    </main>
+
+    <section class="contact-strip" id="contact">
+      <div class="contact-content">
+        <div class="contact-block">
+          <h2>CONTACT</h2>
+          <p>Napiš mi kvůli collabu, komisi nebo side questům.</p>
+        </div>
+
+        <div class="contact-block">
+          <p><strong>EMAIL</strong><br />example@email.com</p>
+          <p><strong>INSTAGRAM</strong><br />@totalsanityfailure</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
