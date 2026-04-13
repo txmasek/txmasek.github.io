@@ -432,7 +432,7 @@
 /* RIGHT SIDE = TEXT */
 .archive-overlay-content {
   height: 100%;
-  padding: 40px 64px 40px 12px;
+  padding: 40px 80px 40px 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
