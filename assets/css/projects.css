@@ -345,7 +345,7 @@
   color: var(--green);
 }
 
-/* LEFT SIDE = IMAGE SQUARE */
+/* LEFT SIDE = IMAGE */
 .archive-overlay-media {
   position: relative;
   height: 100%;
@@ -362,7 +362,7 @@
   display: block;
 }
 
-/* ARROWS = pure text glyphs */
+/* ARROWS */
 .overlay-arrow {
   position: absolute;
   top: 50%;
@@ -397,7 +397,7 @@
   right: 14px;
 }
 
-/* DOTS = no box */
+/* DOTS */
 .overlay-dots-bar {
   position: absolute;
   bottom: 12px;
@@ -418,30 +418,34 @@
   cursor: pointer;
 }
 
-.overlay-dot:hover {
-  background: var(--green);
-  border-color: #000;
-}
-
+.overlay-dot:hover,
 .overlay-dot.is-active {
   background: var(--green);
   border-color: #000;
 }
 
-/* RIGHT SIDE = TEXT */
+.overlay-arrow.is-hidden,
+.overlay-dots-bar.is-hidden {
+  display: none;
+}
+
+/* RIGHT SIDE = TEXT BLOCK CENTERED */
 .archive-overlay-content {
   height: 100%;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow: auto;
   text-align: left;
 }
 
 .archive-overlay-content > * {
   width: 100%;
-  max-width: none;
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .archive-overlay-type {
@@ -461,7 +465,6 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 20px;
-  width: 100%;
 }
 
 .overlay-meta-box {
@@ -488,7 +491,7 @@
   color: var(--muted);
   font-size: 16px;
   line-height: 1.45;
-  max-width: none;
+  max-width: 290px;
 }
 
 .archive-overlay-actions {
@@ -513,15 +516,11 @@
   filter: brightness(0.95);
 }
 
-.overlay-arrow.is-hidden,
-.overlay-dots-bar.is-hidden {
-  display: none;
-}
-
 body.overlay-open {
   overflow: hidden;
 }
 
+/* FOOTER */
 .projects-footer-strip {
   border-top: 2px solid var(--line);
   background: var(--green);
@@ -530,6 +529,7 @@ body.overlay-open {
   font-size: clamp(22px, 3vw, 34px);
 }
 
+/* NAV FIX */
 .nav-btn {
   display: inline-flex;
   align-items: center;
@@ -587,12 +587,14 @@ body.overlay-open {
   }
 
   .archive-overlay-content {
-    max-width: 100%;
     padding: 20px;
+    align-items: stretch;
   }
 
   .archive-overlay-content > * {
     max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .archive-overlay-meta {
