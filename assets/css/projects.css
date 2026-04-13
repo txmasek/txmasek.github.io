@@ -429,10 +429,10 @@
   display: none;
 }
 
-/* RIGHT SIDE = TEXT BLOCK CENTERED */
+/* RIGHT SIDE = TEXT */
 .archive-overlay-content {
   height: 100%;
-  padding: 40px;
+  padding: 40px 56px 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -444,8 +444,7 @@
 .archive-overlay-content > * {
   width: 100%;
   max-width: 290px;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 }
 
 .archive-overlay-type {
@@ -455,9 +454,11 @@
 }
 
 .archive-overlay-content h3 {
+  width: 100%;
+  max-width: 290px;
   font-size: 48px;
   line-height: 0.9;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .archive-overlay-meta {
@@ -466,7 +467,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .overlay-meta-box {
@@ -490,10 +491,12 @@
 }
 
 .archive-overlay-description {
+  width: 100%;
+  max-width: 290px;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.45;
-  max-width: 290px;
+  margin: 0;
 }
 
 .archive-overlay-actions {
@@ -595,11 +598,10 @@ body.overlay-open {
 
   .archive-overlay-content > * {
     max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .archive-overlay-meta {
+    max-width: 100%;
     grid-template-columns: 1fr;
   }
 
@@ -691,23 +693,5 @@ body.overlay-open {
 
   .archive-card-body h4 {
     font-size: 21px;
-  }
-
-    /* RIGHT PANEL OFFSET FIX */
-  .archive-overlay-content {
-    padding: 40px 56px 40px 20px !important;
-    align-items: flex-start !important;
-  }
-
-  .archive-overlay-content > * {
-    width: 100% !important;
-    max-width: 290px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  .archive-overlay-meta {
-    width: 100% !important;
-    max-width: 290px !important;
   }
 }
