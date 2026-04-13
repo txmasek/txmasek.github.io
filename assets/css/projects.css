@@ -367,23 +367,19 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-
   width: 32px;
   height: 32px;
   padding: 0;
   border: none;
   background: transparent;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: #fff;
   font-family: "Pixelify Sans", sans-serif;
   font-size: 28px;
   line-height: 1;
   cursor: pointer;
-
   text-shadow: 1px 1px 0 #000;
   -webkit-text-stroke: 0;
   filter: none;
@@ -435,10 +431,16 @@
 /* RIGHT SIDE = TEXT */
 .archive-overlay-content {
   height: 100%;
-  padding: 60px 40px 28px;
+  padding: 60px 48px 28px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   overflow: auto;
+}
+
+.archive-overlay-content > * {
+  max-width: 420px;
 }
 
 .archive-overlay-type {
@@ -458,6 +460,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .overlay-meta-box {
@@ -484,7 +487,7 @@
   color: var(--muted);
   font-size: 16px;
   line-height: 1.45;
-  max-width: 300px;
+  max-width: 420px;
 }
 
 .archive-overlay-actions {
@@ -516,6 +519,26 @@
 
 body.overlay-open {
   overflow: hidden;
+}
+
+.projects-footer-strip {
+  border-top: 2px solid var(--line);
+  background: var(--green);
+  color: #000;
+  padding: 24px 7vw;
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.topbar-actions .nav-btn {
+  white-space: nowrap;
 }
 
 /* RESPONSIVE */
@@ -564,6 +587,10 @@ body.overlay-open {
     padding: 20px;
   }
 
+  .archive-overlay-content > * {
+    max-width: 100%;
+  }
+
   .archive-overlay-meta {
     grid-template-columns: 1fr;
   }
@@ -604,6 +631,10 @@ body.overlay-open {
 
   .projects-archive-section {
     padding: 0 5vw 48px;
+  }
+
+  .projects-footer-strip {
+    padding: 18px 5vw;
   }
 
   .projects-kicker {
@@ -652,19 +683,5 @@ body.overlay-open {
 
   .archive-card-body h4 {
     font-size: 21px;
-  }
-  .projects-footer-strip {
-  border-top: 2px solid var(--line);
-  background: var(--green);
-  color: #000;
-  padding: 24px 7vw;
-  font-size: clamp(22px, 3vw, 34px);
-  }
-
-  .nav-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
   }
 }
