@@ -6,6 +6,13 @@
   --green: #4ced40;
 }
 
+@font-face {
+  font-family: "Webpixel";
+  src: url("../fonts/Webpixel-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +27,7 @@ html {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Webpixel", sans-serif;
   overflow-x: hidden;
 }
 
