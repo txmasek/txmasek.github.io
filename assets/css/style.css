@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Webpixel";
+  src: url("/assets/fonts/Webpixel-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #000000;
   --fg: #ffffff;
@@ -16,14 +24,12 @@
 html {
   scroll-behavior: smooth;
 }
-@font-face {
-  font-family: "Webpixel";
-  src: url("../fonts/Webpixel-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
 
-body {
+body,
+button,
+input,
+textarea,
+select {
   background: var(--bg);
   color: var(--fg);
   font-family: "Webpixel", sans-serif;
@@ -41,7 +47,6 @@ a {
 }
 
 button {
-  font-family: inherit;
   border: none;
   background: none;
   border-radius: 0;
