@@ -431,18 +431,17 @@
 /* RIGHT SIDE = TEXT */
 .archive-overlay-content {
   height: 100%;
-  padding: 40px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   overflow: auto;
   text-align: left;
 }
 
 .archive-overlay-content > * {
   width: 100%;
-  max-width: 300px;
+  max-width: none;
 }
 
 .archive-overlay-type {
@@ -489,7 +488,7 @@
   color: var(--muted);
   font-size: 16px;
   line-height: 1.45;
-  max-width: 420px;
+  max-width: none;
 }
 
 .archive-overlay-actions {
