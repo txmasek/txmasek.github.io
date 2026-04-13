@@ -431,16 +431,18 @@
 /* RIGHT SIDE = TEXT */
 .archive-overlay-content {
   height: 100%;
-  padding: 60px 48px 28px;
+  padding: 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow: auto;
+  text-align: left;
 }
 
 .archive-overlay-content > * {
-  max-width: 420px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .archive-overlay-type {
@@ -535,10 +537,13 @@ body.overlay-open {
   justify-content: center;
   text-decoration: none;
   line-height: 1;
+  white-space: nowrap;
 }
 
-.topbar-actions .nav-btn {
-  white-space: nowrap;
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 /* RESPONSIVE */
