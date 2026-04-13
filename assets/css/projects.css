@@ -692,4 +692,22 @@ body.overlay-open {
   .archive-card-body h4 {
     font-size: 21px;
   }
+
+    /* RIGHT PANEL OFFSET FIX */
+  .archive-overlay-content {
+    padding: 40px 56px 40px 20px !important;
+    align-items: flex-start !important;
+  }
+
+  .archive-overlay-content > * {
+    width: 100% !important;
+    max-width: 290px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .archive-overlay-meta {
+    width: 100% !important;
+    max-width: 290px !important;
+  }
 }
