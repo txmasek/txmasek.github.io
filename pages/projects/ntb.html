@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook</title>
+    <link rel="stylesheet" href="/assets\css\style.css">
+    <link rel="stylesheet" href="/assets\css\project-page.css">
+
+    <script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+</head>
+<body>
+    <div class="page-frame">
+        <header class="topbar">
+            <a href="../index.html" class="logo-box" aria-label="Domů">
+              <img src="/assets\images\logo.png" alt="Logo" class="logo-img" />
+            </a>
+
+            <div class="site-title">TotalSanityFailure</div>
+
+            <div class="topbar-actions">
+              <a href="/index.html" class="contact-btn nav-btn">HOME</a>
+
+                <div class="menu-wrap">
+                    <button
+                        type="button"
+                        class="menu-btn"
+                        id="menuBtn"
+                        aria-label="Otevřít menu"
+                        aria-expanded="false"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav class="dropdown-menu" id="dropdownMenu">
+                        <a href="/index.html">HOME</a>
+                        <a href="/pages\projects.html">PROJECTS</a>
+                        <a href="../index.html#contact">CONTACT</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="project-page">
+
+        <section class="project-info">
+
+            <span class="project-number">01</span>
+
+            <h1>Notebook</h1>
+
+            <p class="project-type">
+                3D MODEL
+            </p>
+
+        </section>
+
+        <section class="content-box">
+
+            <div class="box-header">
+                MODEL VIEWER
+            </div>
+
+            <div class="viewer">
+
+                <model-viewer
+                    src="/assets/models/notebook.glb"
+                    alt="Notebook"
+                    camera-controls
+                    auto-rotate
+                    shadow-intensity="0"
+                    skybox-image="/black.png"
+                    environment-image="/white.png"
+                    exposure="1"
+                    loading="eager">
+                </model-viewer>
+
+            </div>
+
+        </section>
+
+        <section class="content-box">
+
+            <div class="box-header">
+                ARMATURE
+            </div>
+
+            <div class="gif-grid">
+
+                <img src="/assets\images\ntb_gif_1.gif" alt="Process GIF 1">
+                <img src="/assets\images\ntb_gif_2.gif" alt="Process GIF 2">
+                <img src="/assets\images\ntb_gif_3.gif" alt="Process GIF 3">
+
+            </div>
+
+        </section>
+
+    </main> 
+    </div>
+
+</body>
+</html>
+
+
